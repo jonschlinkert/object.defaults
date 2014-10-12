@@ -11,6 +11,10 @@ var forOwn = require('for-own');
 var slice = require('array-slice');
 
 module.exports = function defaults(o, objects) {
+  if (o == null) {
+    return {};
+  }
+
   forEach(slice(arguments, 1), function (obj) {
     forOwn(obj, function (val, key) {
       if (o[key] == null) {
@@ -18,6 +22,7 @@ module.exports = function defaults(o, objects) {
       }
     });
   });
+
   return o;
 };
 
@@ -29,7 +34,7 @@ function forEach(arr, cb) {
   var len = arr.length;
   var i = -1;
 
-  while (++i < len) {
+  for (var i = 0; i < len; i++) {
     if (cb(arr[i], i, arr) === false) {
       break;
     }

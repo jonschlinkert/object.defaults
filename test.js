@@ -26,4 +26,12 @@ describe('defaults', function () {
   it('should not merge nested values.', function () {
     defaults({a: {b: 'c'}}, {a: {d: 'e'}}).should.eql({a: {b: 'c'}});
   });
+
+  it('should clone when an empty object is passed as the first arg.', function () {
+    defaults({}, {a: {b: 'c'}}, {a: {d: 'e'}}).should.eql({a: {b: 'c'}});
+  });
+
+  it('should return an empty object when the first arg is null.', function () {
+    defaults(null).should.eql({});
+  });
 });
