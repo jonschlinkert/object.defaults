@@ -7,8 +7,8 @@
 
 'use strict';
 
-var forOwn = require('for-own');
 var slice = require('array-slice');
+var forOwn = require('for-own');
 
 module.exports = function defaults(o, objects) {
   if (o == null) {
@@ -30,10 +30,8 @@ function forEach(arr, cb) {
   if (arr == null) {
     return;
   }
-
   var len = arr.length;
   var i = -1;
-
   for (var i = 0; i < len; i++) {
     if (cb(arr[i], i, arr) === false) {
       break;
