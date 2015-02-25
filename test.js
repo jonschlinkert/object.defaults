@@ -7,7 +7,7 @@
 
 'use strict';
 
-var should = require('should');
+require('should');
 var defaults = require('./');
 
 describe('defaults', function () {
