@@ -2,15 +2,17 @@
 
 > Like `extend` but only copies missing properties/values to the target object.
 
-## Related
 
- - [deep-defaults](https://github.com/jonschlinkert/object.defaults)
- - [object.filter](https://github.com/jonschlinkert/object.filter)
- - [object.map](https://github.com/jonschlinkert/object.map)
- - [object.mixin](https://github.com/jonschlinkert/object.mixin)
- - [object.omit](https://github.com/jonschlinkert/object.omit)
- - [object.pick](https://github.com/jonschlinkert/object.pick)
- - [object.reduce](https://github.com/jonschlinkert/object.reduce)
+## Install with [npm](npmjs.org)
+
+```bash
+npm i object.defaults --save
+```
+### Install with [bower](https://github.com/bower/bower)
+
+```bash
+bower install object.defaults --save
+```
 
 
 ## Usage
@@ -24,23 +26,24 @@ console.log(obj);
 //=> {a: 'c', d: 'c'}
 ```
 
-## Install with [npm](npmjs.org)
 
-```bash
-npm i object.defaults --save
-```
-
-#### Install with [bower](https://github.com/bower/bower)
-
-```bash
-bower install defaults --save
-```
 ## Running tests
 Install dev dependencies.
 
 ```bash
 npm i -d && npm test
 ```
+
+
+## Related
+
+ - [deep-defaults](https://github.com/jonschlinkert/object.defaults)
+ - [object.filter](https://github.com/jonschlinkert/object.filter)
+ - [object.map](https://github.com/jonschlinkert/object.map)
+ - [object.mixin](https://github.com/jonschlinkert/object.mixin)
+ - [object.omit](https://github.com/jonschlinkert/object.omit)
+ - [object.pick](https://github.com/jonschlinkert/object.pick)
+ - [object.reduce](https://github.com/jonschlinkert/object.reduce)
 
 
 ## Author
