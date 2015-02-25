@@ -1,4 +1,4 @@
-# object.defaults [![NPM version](https://badge.fury.io/js/object.defaults.svg)](http://badge.fury.io/js/object.defaults)
+# object.defaults [![NPM version](https://badge.fury.io/js/object.defaults.svg)](http://badge.fury.io/js/object.defaults)  [![Build Status](https://travis-ci.org/jonschlinkert/object.defaults.svg)](https://travis-ci.org/jonschlinkert/object.defaults) 
 
 > Like `extend` but only copies missing properties/values to the target object.
 
