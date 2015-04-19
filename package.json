@@ -1,7 +1,7 @@
 {
   "name": "object.defaults",
   "description": "Like `extend` but only copies missing properties/values to the target object.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/jonschlinkert/object.defaults",
   "author": {
     "name": "Jon Schlinkert",
@@ -29,12 +29,14 @@
     "test": "mocha"
   },
   "dependencies": {
-    "array-slice": "^0.2.2",
-    "for-own": "^0.1.2"
+    "array-each": "^0.1.0",
+    "array-slice": "^0.2.3",
+    "for-own": "^0.1.3",
+    "isobject": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "^4.0.4"
+    "mocha": "^2.2.4",
+    "should": "^6.0.1"
   },
   "keywords": [
     "copy",
