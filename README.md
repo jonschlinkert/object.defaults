@@ -21,7 +21,7 @@ bower install object.defaults --save
 var defaults = require('object.defaults');
 
 var obj = {a: 'c'};
-defaults(obj, {a: 'bbb', d: 'c'}));
+defaults(obj, {a: 'bbb', d: 'c'});
 console.log(obj);
 //=> {a: 'c', d: 'c'}
 ```
