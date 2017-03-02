@@ -3,21 +3,16 @@
   "description": "Like `extend` but only copies missing properties/values to the target object.",
   "version": "0.3.0",
   "homepage": "https://github.com/jonschlinkert/object.defaults",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/object.defaults.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)",
+    "Sobolev Nikita <mail@sobolevn.me> (https://github.com/sobolevn)"
+  ],
+  "repository": "jonschlinkert/object.defaults",
   "bugs": {
     "url": "https://github.com/jonschlinkert/object.defaults/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/object.defaults/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -29,29 +24,42 @@
     "test": "mocha"
   },
   "dependencies": {
-    "array-each": "^0.1.0",
-    "array-slice": "^0.2.3",
-    "for-own": "^0.1.3",
-    "isobject": "^1.0.0"
+    "array-each": "^1.0.1",
+    "array-slice": "^1.0.0",
+    "for-own": "^1.0.0",
+    "isobject": "^3.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.2.4",
-    "should": "^6.0.1"
+    "gulp-format-md": "^0.1.11",
+    "mocha": "^3.2.0"
   },
   "keywords": [
     "copy",
     "default",
     "defaults",
     "extend",
+    "javascript",
+    "js",
     "merge",
     "object",
     "properties",
     "property",
-    "value",
-    "values",
-    "javascript",
-    "js",
     "util",
-    "utils"
-  ]
+    "utils",
+    "value",
+    "values"
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
 }

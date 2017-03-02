@@ -1,8 +1,8 @@
 /*!
  * object.defaults <https://github.com/jonschlinkert/object.defaults>
  *
- * Copyright (c) 2014-2015, Jon Schlinkert.
- * Licensed under the MIT License.
+ * Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+ * Released under the MIT License.
  */
 
 'use strict';
@@ -13,26 +13,30 @@ var forOwn = require('for-own');
 var isObject = require('isobject');
 
 /**
- * Extend `object` with properties of other `objects`
+ * Extends the `target` object with properties of one or
+ * more additional `objects`
  *
  * @name .defaults
- * @param  {Object} `object` The target object. Pass an empty object to shallow clone.
+ * @param  {Object} `target` The target object. Pass an empty object to shallow clone.
  * @param  {Object} `objects`
  * @return {Object}
  * @api public
  */
 
-module.exports = function defaults(o, objects) {
-  if (o == null) return {};
+module.exports = function defaults(target, objects) {
+  if (target == null) {
+    return {};
+  }
 
-  each(slice(arguments, 1), function (obj) {
+  each(slice(arguments, 1), function(obj) {
     if (isObject(obj)) {
-      forOwn(obj, function (val, key) {
-        if (o[key] == null) {
-          o[key] = val;
+      forOwn(obj, function(val, key) {
+        if (target[key] == null) {
+          target[key] = val;
         }
       });
     }
   });
-  return o;
+
+  return target;
 };
