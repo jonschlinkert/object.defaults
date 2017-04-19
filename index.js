@@ -23,7 +23,7 @@ var isObject = require('isobject');
  * @api public
  */
 
-module.exports = function defaults(target, objects) {
+function defaults(target, objects) {
   if (target == null) {
     return {};
   }
@@ -39,4 +39,13 @@ module.exports = function defaults(target, objects) {
   });
 
   return target;
-};
+}
+
+function immutable() {
+  var args = slice(arguments);
+  return defaults.apply(null, [{}].concat(args));
+}
+
+defaults.immutable = immutable;
+
+module.exports = defaults;

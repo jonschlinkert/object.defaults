@@ -18,7 +18,11 @@ describe('defaults', function () {
     ctx.bar = {ccc: 'eee', fff: 'ggg'};
   });
 
-  it('should return an empty string when undefined.', function() {
+  it('should mutate the first argument.', function() {
+    assert(defaults(ctx.foo, ctx.bar) === ctx.foo);
+  });
+
+  it('should return an empty object when undefined.', function() {
     assert.deepEqual(defaults(), {});
   });
 
@@ -57,5 +61,20 @@ describe('defaults', function () {
 
   it('should return an empty object when the first arg is null.', function () {
     assert.deepEqual(defaults(null), {});
+  });
+});
+
+describe('defaults.immutable', function () {
+  var ctx = {};
+  beforeEach(function () {
+    ctx.foo = {aaa: 'bbb', ccc: 'ddd'};
+    ctx.bar = {ccc: 'eee', fff: 'ggg'};
+  });
+
+  it('should not mutate the first argument.', function() {
+    var result = defaults.immutable(ctx.foo, ctx.bar);
+    assert(result !== ctx.foo);
+    assert.deepEqual(ctx.foo, {aaa: 'bbb', ccc: 'ddd'});
+    assert.deepEqual(result, {aaa:'bbb',ccc:'ddd',fff:'ggg'});
   });
 });
