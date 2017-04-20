@@ -14,7 +14,9 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "immutable.js",
+    "mutable.js"
   ],
   "main": "index.js",
   "engines": {
